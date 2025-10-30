@@ -8,9 +8,23 @@ bool hasDuplicates(int array[], int size);
 
 int main(void) {
 
-	int nums[] = { 1,2,2,4,5,6};
+	int nums[6];
+
+	//get input
+	for (int i = 0; i < 6; i++) {
+		
+		cout << "Enter integer #" << i+1 << ": ";
+		cin >> nums[i];
+
+	}
+	cout << endl;
 	
-	cout << hasDuplicates(nums, 6) << endl;
+	if (isSortedIncreasing(nums, 6)) { cout << "The data are increasing.\n"; } else {cout << "The data are not increasing.\n";  }
+	if (isSortedDecreasing(nums, 6)) { cout << "The data are decreasing.\n"; } else { cout << "The data are not decreasing.\n"; }
+
+	if (hasAdjecentDuplicates(nums, 6)) { cout << "The data has adjacent duplicates.\n"; }
+	if (hasDuplicates(nums, 6)) { cout << "The data has duplicates.\n"; }
+
 
 }
 
